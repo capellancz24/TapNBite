@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TapNBite_Original</string>
+
+
+    <string name="ob_text1">It’s a pleasure to meet you. We are \n excited that you’re here so let’s get \nstarted!</string>
+    <string name="ob_text2">Order from Canteen 1 and 2 with easy, pick-up.</string>
+    <string name="ob_text3">Easily find your type of food craving and you’ll get it in wide range.</string>
+
+    <string name="create_account_student">Choose one of the options to access this app.</string>"
+    <string name="login_student">Welcome back to TAPNBITE!</string>"
+    <string name="terms_and_conditions">By creating an account, you agree to our <font color='#025CF8'>Privacy Policy</font> and
+        <font color='#025CF8'>Terms &amp; Conditions</font></string>
+
+    <string name="have_account">Already have an Account? \n<font color='#025CF8'>Log In</font></string>
+</resources>
