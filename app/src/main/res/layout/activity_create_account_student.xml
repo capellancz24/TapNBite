@@ -91,6 +91,9 @@
                 android:layout_height="102.6px"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
                 android:background="@drawable/roundtextinput"
                 android:ems="10"
                 android:fontFamily="@font/atyp_medium"
@@ -107,6 +110,9 @@
                 android:layout_height="102.6px"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
                 android:background="@drawable/roundtextinput"
                 android:ems="10"
                 android:fontFamily="@font/atyp_medium"
@@ -121,6 +127,9 @@
                 android:layout_height="102.6px"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
                 android:background="@drawable/roundtextinput"
                 android:ems="10"
                 android:fontFamily="@font/atyp_medium"
@@ -135,6 +144,9 @@
                 android:layout_height="102.6px"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
                 android:background="@drawable/roundtextinput"
                 android:ems="10"
                 android:fontFamily="@font/atyp_medium"
@@ -149,6 +161,9 @@
                 android:layout_height="102.6px"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
                 android:background="@drawable/roundtextinput"
                 android:ems="10"
                 android:fontFamily="@font/atyp_medium"
@@ -221,14 +236,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitEnd"
-        app:srcCompat="@drawable/ic_platformblue" />
 
 </RelativeLayout>
