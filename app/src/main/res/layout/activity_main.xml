@@ -26,7 +26,7 @@
             android:layout_width="310px"
             android:layout_height="98px"
             android:layout_gravity="center"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             app:srcCompat="@drawable/ic_tapnbite" />
     </LinearLayout>
 </RelativeLayout>

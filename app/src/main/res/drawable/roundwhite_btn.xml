@@ -1,20 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true">
+    <item android:state_pressed="false">
         <layer-list>
             <!-- SHADOW -->
             <item>
                 <shape>
-                    <solid android:color="#D9D9D9"/>
-                    <!-- alttan gölge -->
+                    <solid android:color="#F3F3F3"/>
                     <corners android:radius="96.8px"/>
                 </shape>
             </item>
-            <!-- BUTTON alttan gölge
-              android:right="5px" to make it round-->
-            <item android:bottom="2px">
+            <!-- BUTTON -->
+            <item android:bottom="5px">
                 <shape>
-                    <padding android:bottom="2dp"/>
+                    <padding android:bottom="5dp"/>
                     <solid android:color="@color/white"></solid>
                     <corners
                         android:radius="96.8px"/>
@@ -28,26 +25,20 @@
         </layer-list>
     </item>
 
-    <item android:state_enabled="false">
+    <item android:state_pressed="true" android:state_selected="true">
         <layer-list>
-            <!-- SHADOW -->
-            <item>
-                <shape>
-                    <solid android:color="#D9D9D9"/>
-                    <corners android:radius="96.8px"/>
-
-                </shape>
-            </item>
-            <!-- BUTTON -->
-            <item android:bottom="5px">
+            <!-- BUTTON alttan gölge
+              android:right="5px" to make it round-->
+            <item android:bottom="2px">
                 <shape>
                     <padding android:bottom="5dp"/>
-                    <solid android:color="@color/white"></solid>
-                    <corners android:radius="96.8px"/>
+                    <solid android:color="@color/primary"></solid>
+                    <corners
+                        android:radius="96.8px"/>
                     <padding
-                        android:left="10dp"
-                        android:top="10dp"
-                        android:right="5dp"
+                        android:left="5dp"
+                        android:top="13dp"
+                        android:right="7dp"
                         android:bottom="10dp"/>
                 </shape>
             </item>

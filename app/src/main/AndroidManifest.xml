@@ -13,13 +13,22 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
+            android:name=".CheckOut_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccountStudent_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginAccountStudent_Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Onboarding_Activity"
             android:exported="false" />
         <activity
-            android:name=".CreateAccountStudent_Activity"
+            android:name=".Menu_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

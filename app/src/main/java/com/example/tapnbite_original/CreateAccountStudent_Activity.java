@@ -1,6 +1,9 @@
 package com.example.tapnbite_original;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class CreateAccountStudent_Activity extends AppCompatActivity {
+
+    private Button move;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,14 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        move = findViewById(R.id.loginBtn);
+        move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateAccountStudent_Activity.this, LoginAccountStudent_Activity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
