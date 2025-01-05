@@ -34,9 +34,7 @@ public class Menu_Activity extends AppCompatActivity {
         bottomNavigation.setOnItemSelectedListener(navListener);
 
         Fragment selectedFragment = new Home_Fragment();
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
     }
 
     private NavigationBarView.OnItemSelectedListener navListener = item -> {
