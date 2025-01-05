@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
-            android:name=".CheckOut_Activity"
+            android:name=".Checkout2_Activity"
             android:exported="false" />
         <activity
             android:name=".CreateAccountStudent_Activity"
