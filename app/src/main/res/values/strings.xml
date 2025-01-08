@@ -3,9 +3,9 @@
 
 
     <string name="ob_text1">It’s a pleasure to meet you. We are \n excited that you’re here so let’s get \nstarted!</string>
-    <string name="ob_text2">Order from Canteen 1 and 2 with easy, pick-up.</string>
-    <string name="ob_text3">Easily find your type of food craving and you’ll get it in wide range.</string>
-
+    <string name="ob_text2">Order from Canteen 1 and 2 \n with easy, pick-up.</string>
+    <string name="ob_text3">Easily find your type of food craving \n and you’ll get it in wide range.</string>
+    g
     <string name="create_account_student">Choose one of the options to access this app.</string>"
     <string name="login_student">Welcome back to <font color='#025CF8'>TAPNBITE!</font></string>
     "
