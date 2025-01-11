@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="37dp" />
+            app:layout_constraintGuide_end="886dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -69,7 +69,7 @@
         android:fontFamily="@font/atyp_semibold"
         android:paddingTop="25dp"
         android:paddingBottom="18dp"
-        android:text="Find Your Food"
+        android:text="Canteen 1"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="42px" />
@@ -87,7 +87,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="133dp"
+            android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:orientation="vertical">
 
@@ -156,12 +156,12 @@
 
             <EditText
                 android:id="@+id/search_bar"
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:background="@color/white"
                 android:ems="10"
                 android:fontFamily="@font/atyp_medium"
-                android:hint="Search what do you want?"
+                android:hint="Find your food"
                 android:inputType="text"
                 android:paddingLeft="3dp"
                 android:paddingTop="5dp"
@@ -180,20 +180,21 @@
                 android:layout_marginBottom="10dp"
                 android:background="?android:attr/listDivider"
                 android:backgroundTint="@color/black"
-                android:layout_marginLeft="10dp"
-                app:layout_constraintStart_toEndOf="@+id/search_bar"
-                tools:layout_editor_absoluteY="10dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/filterIcon"
+                app:layout_constraintHorizontal_bias="0.98"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <ImageView
                 android:id="@+id/filterIcon"
                 android:layout_width="40dp"
                 android:layout_height="32dp"
+                android:layout_marginRight="10dp"
                 android:src="@drawable/ic_filter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.42"
-                app:layout_constraintStart_toEndOf="@+id/divider4"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -224,7 +225,7 @@
                     android:id="@+id/textView22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="20dp"
+                    android:paddingTop="22dp"
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/atyp_semibold"
                     android:textColor="@color/white"
@@ -244,7 +245,9 @@
                     android:layout_width="80dp"
                     android:layout_height="25dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginLeft="20dp">
+                    android:layout_marginLeft="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@color/white">
 
                     <TextView
                         android:id="@+id/textView24"
@@ -476,7 +479,7 @@
             android:textSize="18dp"/>
 
         <TextView
-            android:id="@+id/seeAllTxt"
+            android:id="@+id/seeAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -508,9 +511,9 @@
             android:id="@+id/popularfoodView"
             android:layout_width="match_parent"
             android:layout_height="260dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            tools:listitem="@layout/viewholder_popular_foods"
+            tools:itemCount="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

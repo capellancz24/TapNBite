@@ -47,140 +47,135 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_end="233dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="3dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="35dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="40dp"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="150px"
-                    android:layout_height="150px"
+                    android:layout_width="70sp"
+                    android:layout_height="70sp"
                     android:layout_gravity="center"
                     android:layout_marginTop="78dp"
+                    android:contentDescription="@string/ic_loginacc"
                     app:srcCompat="@drawable/ic_bluelogo" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/atyp_semibold"
-                    android:text="Login Your Account"
+                    android:text="@string/login_to_your_account"
                     android:textAlignment="center"
                     android:textColor="@color/text"
-                    android:textSize="56px" />
+                    android:textSize="21sp" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/atyp_medium"
-                    android:text="@string/login_student"
+                    android:text="@string/welcome_back_you_ve_been_missed"
                     android:textAlignment="center"
-                    android:textSize="38px" />
+                    android:textSize="15sp" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
                     android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        app:helperTextEnabled="true"
-                        app:hintTextColor="@color/primary">
+                        android:layout_marginTop="15dp"
+                        app:hintEnabled="false"
+                        app:helperTextEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="@drawable/roundtextinput"
                             android:fontFamily="@font/atyp_medium"
-                            android:hint="School ID"
-                            android:inputType="text"
+                            android:hint="@string/email"
+                            android:inputType="textAutoComplete"
                             android:paddingLeft="20dp"
                             android:paddingTop="19dp"
                             android:paddingRight="20dp"
                             android:paddingBottom="18dp"
-                            android:textSize="38px" />
+                            android:textSize="15sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
+                        android:layout_marginTop="15dp"
+                        app:hintEnabled="false"
                         app:endIconMode="password_toggle"
-                        app:helperTextEnabled="true"
-                        app:hintTextColor="@color/primary">
+                        app:helperTextEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="@drawable/roundtextinput"
                             android:fontFamily="@font/atyp_medium"
-                            android:hint="Password"
+                            android:hint="@string/password"
                             android:inputType="textPassword"
                             android:paddingLeft="20dp"
                             android:paddingTop="19dp"
                             android:paddingRight="20dp"
                             android:paddingBottom="18dp"
-                            android:textSize="38px" />
+                            android:textSize="15sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="end"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textView16"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:paddingTop="10dp"
-                            android:paddingRight="5dp"
-                            android:textAlignment="textEnd"
+                            android:layout_height="48dp"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:fontFamily="@font/atyp_medium"
-                            android:textColor="@color/primary"
-                            android:text="Forgot Password" />
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:text="@string/forgot_your_password"
+                            android:textColor="@color/primary" />
                     </LinearLayout>
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
 
                 <Button
                     android:id="@+id/button6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/roundprimary_btn"
                     android:fontFamily="@font/atyp_semibold"
                     android:paddingTop="4dp"
-                    android:text="LOG IN"
+                    android:text="@string/sign_in"
                     android:textColor="@color/light"
-                    android:textSize="42px" />
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -193,10 +188,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
                         android:fontFamily="@font/atyp_medium"
-                        android:text="Don't have an account?"
+                        android:text="@string/don_t_have_an_account"
                         android:textAlignment="center"
                         android:textColor="#979797"
-                        android:textSize="35px" />
+                        android:textSize="14sp" />
 
                     <Button
                         android:id="@+id/signupBtn"
@@ -206,10 +201,10 @@
                         android:background="#0000"
                         android:fontFamily="@font/atyp_semibold"
                         android:paddingBottom="20dp"
-                        android:text="SIGN UP"
+                        android:text="@string/sign_up"
                         android:textAlignment="center"
                         android:textColor="@color/primary"
-                        android:textSize="40px" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>

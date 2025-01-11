@@ -14,10 +14,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.tapnbite_original.R;
+import com.google.android.material.search.SearchBar;
 
 public class Home_Fragment extends Fragment {
 
     View view;
+    private SearchBar sb;
 
     @Nullable
     @Override
@@ -25,6 +27,7 @@ public class Home_Fragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
 
         return view;
 

@@ -54,4 +54,22 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="nu_email">NU Email</string>
+    <string name="school_id">School ID</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="ic_createacc">ic_createacc</string>
+    <string name="email">Email</string>
+    <string name="ic_loginacc">ic_loginacc</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login_to_your_account">Login to Your Account</string>
+    <string name="welcome_back_you_ve_been_missed">Welcome back you\'ve been missed!</string>
+    <string name="forgot_your_password">Forgot your Password?</string>
+    <string name="login">LOGIN</string>
 </resources>

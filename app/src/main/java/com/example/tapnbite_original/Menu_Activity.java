@@ -16,6 +16,7 @@ import com.example.tapnbite_original.Fragments.Order_Fragment;
 import com.example.tapnbite_original.Fragments.Profile_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.search.SearchBar;
 
 public class Menu_Activity extends AppCompatActivity {
 
