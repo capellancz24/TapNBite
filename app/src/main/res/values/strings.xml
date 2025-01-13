@@ -5,13 +5,17 @@
     <string name="ob_text1">It’s a pleasure to meet you. We are \n excited that you’re here so let’s get \nstarted!</string>
     <string name="ob_text2">Order from Canteen 1 and 2 \n with easy, pick-up.</string>
     <string name="ob_text3">Easily find your type of food craving \n and you’ll get it in wide range.</string>
-    g
-    <string name="create_account_student">Choose one of the options to access this app.</string>"
+
+    <string name="create_account_student">Choose one of the options to access this app.</string>
     <string name="login_student">Welcome back to <font color='#025CF8'>TAPNBITE!</font></string>
-    "
+
+
     <string name="terms_and_conditions">By creating an account, you agree to our <font color='#025CF8'>Privacy Policy</font> and
         <font color='#025CF8'>Terms &amp; Conditions</font></string>
     <string name="empty_cart">Oops! Your cart feels lonely. \nAdd something to keep it company!</string>
+    <string name="privacypolicy">This Privacy Policy explains how <b>TapNBite</b> collects, uses, and protects your personal information</string>
+
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -72,4 +76,13 @@
     <string name="welcome_back_you_ve_been_missed">Welcome back you\'ve been missed!</string>
     <string name="forgot_your_password">Forgot your Password?</string>
     <string name="login">LOGIN</string>
+    <string name="useofdata">TapNBite collects essential user data, such as name, student ID, and order history, to enable account creation, order processing, and payment verification. This data is used solely to enhance the user experience and improve app services. \n\n\nTapNBite will not share personal information with third parties unless required by law or authorized by the user.</string>
+    <string name="protection">All user data is encrypted and stored securely to prevent unauthorized access. Users are responsible for maintaining the confidentiality of their login credentials. TapNBite implements robust security measures but cannot guarantee absolute immunity from breaches caused by external factors.</string>
+    <string name="rights">Users can access their order and transaction history within the app. They also have the right to request modifications or deletions of their data by contacting TapNBite support. Account deletions will result in the removal of all associated data, including any remaining Pellet balance.</string>
+    <string name="limitations">While TapNBite strives to ensure secure operations, users acknowledge that technical issues or disruptions may occur. TapNBite will not be held liable for damages resulting from connectivity problems, user negligence, or third-party actions outside its control.</string>
+    <string name="terms">Welcome to <b>Tap N Bite!</b> By using the app, you agree to these Terms and Conditions. Please read them carefully to ensure a clear understanding of your rights and responsibilities while using the platform.</string>
+    <string name="responsibilites">Users are required to register on the TapNBite platform with accurate personal details, including their full name, student number, and school email. These details ensure verification and proper account management. \n\n\nAccounts are personal and non-transferable, and users must safeguard their login credentials. TapNBite reserves the right to suspend accounts in cases of misuse, unauthorized access, or violations of the platform’s terms.</string>
+    <string name="paymentpolicy">TapNBite operates exclusively with Pellets, the app’s digital currency. Users must ensure sufficient wallet balance before placing orders. Payment is processed immediately upon order confirmation, and refunds for cancellations or errors will be reviewed individually. \n\n\nAny eligible refunds will be credited as Pellets. Users are encouraged to monitor their wallet and transaction history to ensure transparency.</string>
+    <string name="appaccess">The app requires a stable internet connection and is optimized for Android devices. TapNBite is not liable for interruptions caused by connectivity issues or device incompatibility. Users are advised to ensure reliable internet access and to use updated devices for optimal performance.</string>
+    <string name="coduct">Users are encouraged to provide constructive feedback and ratings on the app. Inappropriate or malicious comments aimed at disrupting the platform or harming others are prohibited. TapNBite reserves the right to investigate such behavior and take necessary action, including account suspension.</string>
 </resources>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
+            android:name=".TermsAndConditions_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginAccountStudent_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Search_Activity"
             android:exported="false" />
         <activity
@@ -28,9 +34,9 @@
             android:name=".Menu_Activity"
             android:exported="false" />
         <activity
-            android:windowSoftInputMode="adjustPan"
             android:name=".CreateAccountStudent_Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -38,9 +44,9 @@
             android:name=".Onboarding1_Activity"
             android:exported="false" />
         <activity
-            android:windowSoftInputMode="adjustPan"
-            android:name=".LoginAccountStudent_Activity"
-            android:exported="true">
+            android:name=".PrivacyPolicy_Activity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

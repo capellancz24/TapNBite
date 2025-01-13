@@ -33,7 +33,6 @@ public class Onboarding3_Activity extends AppCompatActivity {
         });
 
         getWindow().setStatusBarColor(ContextCompat.getColor(Onboarding3_Activity.this, R.color.light_2_0));
-        getWindow().setNavigationBarColor(ContextCompat.getColor(Onboarding3_Activity.this, R.color.white));
 
         getstartedButton = findViewById(R.id.getstartedBtn);
         getstartedButton.setOnClickListener(new View.OnClickListener() {

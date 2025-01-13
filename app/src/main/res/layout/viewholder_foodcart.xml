@@ -136,7 +136,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="9dp"
                         android:background="@drawable/custom_add_and_minus"
-                        android:contentDescription="additems"
+                        android:contentDescription="deductItems"
                         android:paddingBottom="16dp"
                         app:srcCompat="@drawable/ic_minus" />
 
@@ -162,7 +162,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="9dp"
                         android:background="@drawable/custom_add_and_minus"
-                        android:contentDescription="removeitems"
+                        android:contentDescription="addItems"
                         app:srcCompat="@drawable/ic_add2" />
                 </LinearLayout>
 
@@ -171,7 +171,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginEnd="10dp"
-                    android:contentDescription="deleteitem"
+                    android:contentDescription="deleteItem"
                     android:background="@drawable/custom_add_and_minus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

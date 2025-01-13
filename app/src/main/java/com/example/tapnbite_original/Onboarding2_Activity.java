@@ -27,7 +27,6 @@ public class Onboarding2_Activity extends AppCompatActivity {
         });
 
         getWindow().setStatusBarColor(ContextCompat.getColor(Onboarding2_Activity.this, R.color.light_2_0));
-        getWindow().setNavigationBarColor(ContextCompat.getColor(Onboarding2_Activity.this, R.color.white));
 
         nextButton = findViewById(R.id.nextBtn);
         nextButton.setOnClickListener(new View.OnClickListener() {

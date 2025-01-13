@@ -10,4 +10,7 @@
     <color name="light">#F6F5FD</color>
     <color name="light_2.0">#F2F8FC</color>
     <color name="grey">#979797</color>
+
+    <color name="start_color">#025CF8</color>
+    <color name="end_color">#013692</color>
 </resources>
