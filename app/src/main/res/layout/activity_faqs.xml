@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FAQs_Activity">
+
+    <TextView
+        android:id="@+id/nav_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bluetop"
+        android:fontFamily="@font/atyp_semibold"
+        android:paddingTop="25dp"
+        android:paddingBottom="18dp"
+        android:text="FAQs"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="42px" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_2.0"
+        android:layout_below="@id/nav_title2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_medium"
+                    android:text="General Questions"
+                    android:textColor="@color/text"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_update" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/atyp_medium"
+                        android:paddingStart="3dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:text="Last Update: 11 January 2025"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="What is TapNBite?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/whatistapnbite"
+                android:textColor="@color/text"
+                android:justificationMode="inter_word"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Who can use TapNBite?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/whocanuse"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Registration and Account"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I create an account on TapNBite?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:paddingTop="5dp"
+                android:lineSpacingExtra="3dp"
+                android:paddingBottom="10dp"
+                android:justificationMode="inter_word"
+                android:text="@string/howcreateacc"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Is my personal information secure?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/personalinformation"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Features and Usage"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text= "What features does TapNBite offer?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="5dp"
+                android:text="@string/features"
+                android:textColor="@color/text"
+                android:lineSpacingExtra="3dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I track my order?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/trackorder"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Payments"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I pay for my order?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/payorder"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="What are 'Pellets'?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/pellets"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Is there a minimum wallet balance required for pre-orders?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/walletbal"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Technical and Accessibility"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Which devices support TapNBite?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/devices"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Do I need an internet connection to use the app?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/internetconnnect"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Canteen Operations"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How does TapNBite help reduce food waste?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/foodwaste"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How does the app assist canteen staff?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/appassist"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Limitations and Issues"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Can I use other payment methods apart from the e-wallet?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/paymentmethods"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Are there any risks of using the app?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="50dp"
+                android:text="@string/risks"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

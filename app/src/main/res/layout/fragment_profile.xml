@@ -194,7 +194,7 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/aboutUs"
+            android:id="@+id/aboutUsCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -207,13 +207,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp">
+                android:paddingLeft="15dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_info" />
 
                 <TextView
@@ -228,17 +227,21 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
+                <ImageButton
+                    android:id="@+id/aboutusbutton"
+                    android:layout_width="50dp"
+                    android:layout_height="53dp"
+                    android:background="#0000"
+                    android:contentDescription="aboutus"
                     android:src="@drawable/ic_arrow" />
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/FAQ"
+            android:id="@+id/faqsCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -251,13 +254,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp">
+                android:paddingLeft="15dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_faq" />
 
                 <TextView
@@ -268,15 +270,19 @@
                     android:fontFamily="@font/atyp_medium"
                     android:paddingLeft="10dp"
                     android:paddingTop="2dp"
-                    android:text="FAQ"
+                    android:text="FAQS"
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
+                <ImageButton
+                    android:id="@+id/faqbtn"
+                    android:layout_width="50dp"
+                    android:layout_height="53dp"
+                    android:background="#0000"
+                    android:contentDescription="faqs"
                     android:src="@drawable/ic_arrow" />
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -295,13 +301,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp">
+                android:paddingLeft="15dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_note" />
 
                 <TextView
@@ -316,11 +321,15 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
+                <ImageButton
+                    android:id="@+id/termsbutton"
+                    android:layout_width="50dp"
+                    android:layout_height="53dp"
+                    android:background="#0000"
+                    android:contentDescription="@string/terms_and_conditions"
                     android:src="@drawable/ic_arrow" />
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -339,13 +348,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp">
+                android:paddingLeft="15dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_shield" />
 
                 <TextView
@@ -358,13 +366,17 @@
                     android:paddingTop="2dp"
                     android:text="Privacy Policy"
                     android:textColor="@color/text"
-                    android:textSize="17dp" />
+                    android:textSize="16dp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
+                <ImageButton
+                    android:id="@+id/privacypolicybutton"
+                    android:layout_width="50dp"
+                    android:layout_height="53dp"
+                    android:background="#0000"
+                    android:contentDescription="@string/terms_and_conditions"
                     android:src="@drawable/ic_arrow" />
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -376,6 +388,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
+            android:clickable="true"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="29.13px">
 

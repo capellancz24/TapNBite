@@ -13,11 +13,24 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
-            android:name=".TermsAndConditions_Activity"
+            android:name=".FAQs_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog.PrivacyPolicy_Dialog"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog.TermsAndConditions_Dialog"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog.AboutApp_Dialog"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyPolicy_Activity"
             android:exported="false" />
         <activity
             android:name=".LoginAccountStudent_Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Search_Activity"
             android:exported="false" />
@@ -31,7 +44,7 @@
             android:name=".Checkout2_Activity"
             android:exported="false" />
         <activity
-            android:name=".Menu_Activity"
+            android:name=".TermsAndConditions_Activity"
             android:exported="false" />
         <activity
             android:name=".CreateAccountStudent_Activity"
@@ -44,9 +57,8 @@
             android:name=".Onboarding1_Activity"
             android:exported="false" />
         <activity
-            android:name=".PrivacyPolicy_Activity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan">
+            android:name=".Menu_Activity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

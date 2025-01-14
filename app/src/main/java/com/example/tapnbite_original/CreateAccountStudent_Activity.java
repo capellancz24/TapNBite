@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CreateAccountStudent_Activity extends AppCompatActivity {
 
-    private Button move;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +29,20 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
 
         getWindow().setNavigationBarColor(ContextCompat.getColor(CreateAccountStudent_Activity.this, R.color.primary));
 
-        move = findViewById(R.id.loginBtn);
-        move.setOnClickListener(new View.OnClickListener() {
+        Button lb = findViewById(R.id.loginBtn);
+        lb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateAccountStudent_Activity.this, LoginAccountStudent_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        CheckBox cb = findViewById(R.id.checkBox);
+        cb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateAccountStudent_Activity.this, TermsAndConditions_Activity.class);
                 startActivity(intent);
             }
         });

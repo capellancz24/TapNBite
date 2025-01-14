@@ -29,7 +29,6 @@ public class Cart_Fragment extends Fragment {
 
         // Initialize the checkout button (Fragment to Activity)
         checkoutButton = view.findViewById(R.id.checkoutBtn);
-
         checkoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

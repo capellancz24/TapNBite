@@ -1,52 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PrivacyPolicy_Activity">
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@drawable/gradientbg_custom">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/backbutton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="#0000"
-                android:contentDescription="goBack"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.04"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.41000003"
-                app:srcCompat="@drawable/ic_goback" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="35dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="35dp"
-            android:paddingBottom="10dp"
-            app:srcCompat="@drawable/ic_foods" />
-    </FrameLayout>
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/frameLayout">
+        android:layout_height="500dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,17 +23,35 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView20"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/atyp_medium"
-                    android:text="Terms and Conditions"
-                    android:textColor="@color/text"
-                    android:textSize="26sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:fontFamily="@font/atyp_medium"
+                        android:text="Terms &amp; Conditions"
+                        android:textColor="@color/text"
+                        android:layout_weight="1"
+                        android:textSize="26sp" />
+
+                    <ImageButton
+                        android:id="@+id/dropdownbtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:paddingTop="10dp"
+                        android:background="#0000"
+                        android:contentDescription="dropdown"
+                        app:srcCompat="@drawable/ic_down" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -89,7 +72,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/atyp_medium"
                         android:paddingStart="3dp"
-                        android:paddingTop="3dp"
+                        android:paddingTop="4dp"
                         android:paddingBottom="4dp"
                         android:text="Last Update: 11 January 2025"
                         android:textColor="@color/grey"
@@ -103,7 +86,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/atyp_medium" android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
                 android:text="@string/terms"
                 android:textColor="@color/text"
                 android:textSize="15sp" />
@@ -125,6 +109,8 @@
                 android:fontFamily="@font/atyp_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
                 android:text="@string/responsibilites"
                 android:textColor="@color/text"
                 android:textSize="15sp" />
@@ -153,6 +139,8 @@
                 android:fontFamily="@font/atyp_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
                 android:text="@string/paymentpolicy"
                 android:textColor="@color/text"
                 android:textSize="15sp" />
@@ -181,6 +169,8 @@
                 android:fontFamily="@font/atyp_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
                 android:text="@string/appaccess"
                 android:textColor="@color/text"
                 android:textSize="15sp" />
@@ -208,7 +198,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/atyp_regular"
                 android:paddingTop="10dp"
-                android:paddingBottom="100dp"
+                android:paddingBottom="50dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
                 android:text="@string/coduct"
                 android:textColor="@color/text"
                 android:textSize="15sp" />
@@ -216,27 +208,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/nextbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/roundprimary_btn"
-            android:fontFamily="@font/atyp_semibold"
-            android:text="Next"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

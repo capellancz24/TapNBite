@@ -17,7 +17,6 @@ import com.example.tapnbite_original.Fragments.Cart_Fragment;
 
 public class Checkout2_Activity extends AppCompatActivity {
 
-    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +32,9 @@ public class Checkout2_Activity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(Checkout2_Activity.this, R.color.primary));
         getWindow().setNavigationBarColor(ContextCompat.getColor(Checkout2_Activity.this, R.color.white));
 
-        backButton = findViewById(R.id.backBtn);
-        backButton.setOnClickListener(new View.OnClickListener() {
+        // Initialize the button (Activity to Fragment)
+        Button bb = findViewById(R.id.backBtn);
+        bb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new Cart_Fragment();
