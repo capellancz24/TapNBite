@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_2.0"
-    tools:context=".Fragments.Order_Fragment">
+    tools:context=".Fragments.OrderHistory_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/tvUserName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/atyp_semibold"
@@ -108,15 +108,31 @@
                     android:textColor="@color/text"
                     android:textSize="19dp" />
 
-                <TextView
-                    android:id="@+id/userid"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:fontFamily="@font/atyp_medium"
-                    android:text="ID: 2024-000001"
-                    android:textColor="@color/grey"
-                    android:textSize="16dp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="8dp"
+                        android:fontFamily="@font/atyp_medium"
+                        android:text="ID:"
+                        android:textColor="@color/grey"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvUserID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:fontFamily="@font/atyp_medium"
+                        android:text="2024-000001"
+                        android:textColor="@color/grey"
+                        android:textSize="16dp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -134,11 +150,22 @@
                         android:textSize="19dp" />
 
                     <TextView
-                        android:id="@+id/pelletbalance"
-                        android:layout_width="match_parent"
+                        android:id="@+id/tvPelletBalance"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:fontFamily="@font/atyp_bold"
-                        android:text="500 Pellets"
+                        android:text="500"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="6dp"
+                        android:fontFamily="@font/atyp_bold"
+                        android:text="Pellets"
                         android:textAlignment="textEnd"
                         android:textColor="@color/text"
                         android:textSize="19dp" />
@@ -156,7 +183,7 @@
                 android:background="?android:attr/listDivider" />
 
             <Button
-                android:id="@+id/topupBtn"
+                android:id="@+id/btnTopUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -194,7 +221,7 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/aboutUsCardView"
+            android:id="@+id/cvAboutUs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -241,7 +268,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/faqsCardView"
+            android:id="@+id/cvFAQs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -288,7 +315,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/conditions"
+            android:id="@+id/cvTermsAndConditions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -335,7 +362,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/privacypolicy"
+            android:id="@+id/cvPrivacyPolicy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -382,7 +409,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/logout"
+            android:id="@+id/cvLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

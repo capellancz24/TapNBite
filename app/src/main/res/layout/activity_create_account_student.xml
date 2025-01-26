@@ -108,7 +108,7 @@
 
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/ddAccountType"
                     android:layout_width="match_parent"
                     android:theme="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
                     android:layout_height="48dp" />
@@ -139,6 +139,7 @@
                             app:helperTextEnabled="true">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/inputFirstName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/roundtextinput"
@@ -162,6 +163,7 @@
                             app:helperTextEnabled="true">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/inputLastName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/roundtextinput"
@@ -184,6 +186,7 @@
                         app:helperTextEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputSchoolID"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/roundtextinput"
@@ -205,6 +208,7 @@
                         app:helperTextEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputNUEmail"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/roundtextinput"
@@ -227,6 +231,7 @@
                         app:hintEnabled="false">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputPassword"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/roundtextinput"
@@ -249,6 +254,7 @@
                         app:helperTextEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputConfirmPassword"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/roundtextinput"
@@ -271,7 +277,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/cbAgreement"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="10dp"
@@ -284,7 +290,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -313,7 +319,7 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/loginBtn"
+                    android:id="@+id/btnLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

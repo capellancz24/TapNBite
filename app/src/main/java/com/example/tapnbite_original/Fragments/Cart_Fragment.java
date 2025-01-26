@@ -10,15 +10,12 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tapnbite_original.Checkout2_Activity;
+import com.example.tapnbite_original.Checkout_Activity;
 import com.example.tapnbite_original.R;
 
 public class Cart_Fragment extends Fragment {
-
-    View view;
-    private Button checkoutButton;
-
 
     @Nullable
     @Override
@@ -27,15 +24,14 @@ public class Cart_Fragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
 
-        // Initialize the checkout button (Fragment to Activity)
-        checkoutButton = view.findViewById(R.id.checkoutBtn);
-        checkoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Checkout2_Activity.class);
-                startActivity(intent);
-            }
+        // Fragment to Activity
+        Button checkout = view.findViewById(R.id.btnCheckout);
+        checkout.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), Checkout_Activity.class);
+            startActivity(intent);
         });
+
+        RecyclerView cart = view.findViewById(R.id.rvCart);
 
         return view;
     }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_2.0"
-    tools:context=".Checkout2_Activity">
+    tools:context=".Checkout_Activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -107,6 +107,7 @@
                     android:text="Order Summary" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOrderSummaryList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
@@ -144,7 +145,7 @@
                         android:text="Total Price:" />
 
                     <TextView
-                        android:id="@+id/totalprice"
+                        android:id="@+id/tvTotalPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -152,7 +153,18 @@
                         android:fontFamily="@font/atyp_medium"
                         android:textSize="16dp"
                         android:textColor="@color/text"
-                        android:text="98 Pellets" />
+                        android:text="100" />
+
+                    <TextView
+                        android:id="@+id/textView66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/atyp_medium"
+                        android:textSize="16dp"
+                        android:textColor="@color/text"
+                        android:text="Pellets"  />
                 </LinearLayout>
 
             </LinearLayout>
@@ -160,7 +172,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/placeorderBtn"
+        android:id="@+id/btnPlaceOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ordersummary"
@@ -176,14 +188,15 @@
         android:textSize="42px" />
 
     <Button
-        android:id="@+id/backBtn"
+        android:id="@+id/btnBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/placeorderBtn"
-        android:layout_gravity="center"
-        android:layout_marginLeft="100dp"
+        android:layout_below="@id/btnPlaceOrder"
+        android:layout_alignStart="@+id/btnPlaceOrder"
+        android:layout_alignEnd="@+id/btnPlaceOrder"
         android:layout_marginTop="3dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
         android:background="#0000"
         android:fontFamily="@font/atyp_semibold"
         android:paddingTop="4dp"

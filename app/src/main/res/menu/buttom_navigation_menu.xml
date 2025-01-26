@@ -9,7 +9,7 @@
     <item
         android:id="@+id/nav_orders"
         android:icon="@drawable/ic_orders"
-        android:title="Orders">
+        android:title="Receipt">
     </item>
 
     <item

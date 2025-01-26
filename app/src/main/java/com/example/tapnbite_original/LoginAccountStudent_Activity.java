@@ -2,8 +2,8 @@ package com.example.tapnbite_original;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import org.w3c.dom.Text;
+import com.google.android.material.textfield.TextInputEditText;
+
 
 public class LoginAccountStudent_Activity extends AppCompatActivity {
 
@@ -30,14 +31,32 @@ public class LoginAccountStudent_Activity extends AppCompatActivity {
 
         getWindow().setNavigationBarColor(ContextCompat.getColor(LoginAccountStudent_Activity.this, R.color.primary));
 
-        Button sb = findViewById(R.id.signupBtn);
-        sb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginAccountStudent_Activity.this, CreateAccountStudent_Activity.class);
-                startActivity(intent);
-            }
+        /*--------------------------------------- Buttons ---------------------------------------*/
+
+        Button signup = findViewById(R.id.btnSignUp);
+        signup.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginAccountStudent_Activity.this, CreateAccountStudent_Activity.class);
+            startActivity(intent);
         });
+
+        Button login = findViewById(R.id.btnLogin);
+
+        /*--------------------------------------- Buttons ---------------------------------------*/
+
+
+        /*-------------------------------------- TextView ---------------------------------------*/
+
+        TextView forgotPassword = findViewById(R.id.tvForgotPassword);
+
+        /*-------------------------------------- TextView ---------------------------------------*/
+
+
+        /*--------------------------------- TextInputEditTexts ----------------------------------*/
+
+        TextInputEditText email = findViewById(R.id.inputEmail);
+        TextInputEditText password = findViewById(R.id.inputPassword);
+
+        /*--------------------------------- TextInputEditTexts ----------------------------------*/
 
     }
 }

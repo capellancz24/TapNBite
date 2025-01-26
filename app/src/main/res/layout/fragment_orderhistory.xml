@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_2.0"
-    tools:context=".Fragments.Order_Fragment">
+    tools:context=".Fragments.OrderHistory_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -69,62 +69,20 @@
         android:fontFamily="@font/atyp_semibold"
         android:paddingTop="25dp"
         android:paddingBottom="18dp"
-        android:text="Orders"
+        android:text="History"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="42px" />
 
-    <LinearLayout
-        android:id="@+id/canteenButtons"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/nav_title"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/canteen1Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundwhite_btn"
-            android:fontFamily="@font/atyp_semibold"
-            android:text="Active"
-            android:textAllCaps="false"
-            android:textColor="@color/grey"
-            android:textSize="38px" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundwhite_btn"
-            android:fontFamily="@font/atyp_semibold"
-            android:text="History"
-            android:textAllCaps="false"
-            android:textColor="@color/grey"
-            android:textSize="38px" />
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/canteenButtons"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_title">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_height="wrap_content" />
     </ScrollView>
 
 </RelativeLayout>

@@ -2,21 +2,16 @@ package com.example.tapnbite_original;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.tapnbite_original.Fragments.Cart_Fragment;
 import com.example.tapnbite_original.Fragments.Home_Fragment;
-import com.example.tapnbite_original.Fragments.Order_Fragment;
+import com.example.tapnbite_original.Fragments.OrderHistory_Fragment;
 import com.example.tapnbite_original.Fragments.Profile_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.search.SearchBar;
 
 public class Menu_Activity extends AppCompatActivity {
 
@@ -46,7 +41,7 @@ public class Menu_Activity extends AppCompatActivity {
         if (itemID == R.id.nav_home) {
             selectedFragment = new Home_Fragment();
         } else if (itemID == R.id.nav_orders) {
-            selectedFragment = new Order_Fragment();
+            selectedFragment = new OrderHistory_Fragment();
         } else if (itemID == R.id.nav_cart) {
             selectedFragment = new Cart_Fragment();
         } else if (itemID == R.id.nav_profile) {

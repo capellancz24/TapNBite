@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -13,24 +14,18 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
+            android:name=".Notification_Activity"
+            android:exported="false" />
+        <activity
             android:name=".FAQs_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Dialog.PrivacyPolicy_Dialog"
-            android:exported="false" />
-        <activity
-            android:name=".Dialog.TermsAndConditions_Dialog"
-            android:exported="false" />
-        <activity
-            android:name=".Dialog.AboutApp_Dialog"
             android:exported="false" />
         <activity
             android:name=".PrivacyPolicy_Activity"
             android:exported="false" />
         <activity
             android:name=".LoginAccountStudent_Activity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
         <activity
             android:name=".Search_Activity"
             android:exported="false" />
@@ -41,7 +36,7 @@
             android:name=".Onboarding2_Activity"
             android:exported="false" />
         <activity
-            android:name=".Checkout2_Activity"
+            android:name=".Checkout_Activity"
             android:exported="false" />
         <activity
             android:name=".TermsAndConditions_Activity"

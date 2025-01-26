@@ -1,12 +1,8 @@
 package com.example.tapnbite_original;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,13 +26,10 @@ public class PrivacyPolicy_Activity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(ContextCompat.getColor(PrivacyPolicy_Activity.this, R.color.end_color));
 
-        ImageButton backbtn = (ImageButton) findViewById(R.id.backbutton);
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PrivacyPolicy_Activity.this, TermsAndConditions_Activity.class);
-                startActivity(intent);
-            }
+        ImageButton back = findViewById(R.id.btnBack);
+        back.setOnClickListener(v -> {
+            Intent intent = new Intent(PrivacyPolicy_Activity.this, TermsAndConditions_Activity.class);
+            startActivity(intent);
         });
     }
 }
