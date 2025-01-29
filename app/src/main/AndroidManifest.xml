@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -14,6 +13,9 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
+            android:name=".Menu_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Notification_Activity"
             android:exported="false" />
         <activity
@@ -24,8 +26,8 @@
             android:exported="false" />
         <activity
             android:name=".LoginAccountStudent_Activity"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Search_Activity"
             android:exported="false" />
@@ -52,7 +54,7 @@
             android:name=".Onboarding1_Activity"
             android:exported="false" />
         <activity
-            android:name=".Menu_Activity"
+            android:name=".Admin.AdminMenu_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -79,9 +79,9 @@
         android:layout_width="396dp"
         android:layout_height="57dp"
         android:layout_below="@id/nav_title"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/whiteround_textinput"
         android:elevation="@dimen/cardview_default_radius"
         android:orientation="horizontal"
@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:background="@color/white"
-                android:ems="17"
+                android:ems="20"
                 android:fontFamily="@font/atyp_medium"
                 android:hint="Search your food here"
                 android:inputType="text"
@@ -119,33 +119,7 @@
                 app:layout_constraintStart_toEndOf="@+id/searchIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:id="@+id/divider4"
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="?android:attr/listDivider"
-                android:backgroundTint="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ivFilter"
-                app:layout_constraintHorizontal_bias="0.98"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-
-            <ImageView
-                android:id="@+id/ivFilter"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginRight="10dp"
-                android:clickable="true"
-                android:contentDescription="choosecanteen"
-                android:padding="7dp"
-                android:src="@drawable/ic_filter"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

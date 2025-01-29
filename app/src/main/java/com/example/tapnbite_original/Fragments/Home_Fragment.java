@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +29,11 @@ import org.w3c.dom.Text;
 
 public class Home_Fragment extends Fragment {
 
-    private TextView canteenNum;
+    private CardView notification, meals, drinks, snacks, desserts;
+    private TextView canteenNum, seeAll;
+    private EditText search;
+    private RecyclerView popularFoods;
+    private ImageView filter;
 
     @Nullable
     @Override
@@ -37,7 +42,7 @@ public class Home_Fragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        EditText search = view.findViewById(R.id.etSearch);
+        search = view.findViewById(R.id.etSearch);
         search.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_UP) {
                 Intent intent = new Intent(getActivity(), Search_Activity.class);
@@ -47,13 +52,38 @@ public class Home_Fragment extends Fragment {
             return false;
         });
 
-        CardView notification = view.findViewById(R.id.cvNotification);
+        popularFoods = view.findViewById(R.id.rvPopularFoods);
+
+
+        /*------------------------------------- Card View ---------------------------------------*/
+
+        notification = view.findViewById(R.id.cvNotification);
         notification.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), Notification_Activity.class);
             startActivity(intent);
         });
 
-        ImageView filter = view.findViewById(R.id.ivFilter);
+        meals = view.findViewById(R.id.cvMeals);
+        meals.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Meals Clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        drinks = view.findViewById(R.id.cvDrinks);
+        drinks.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Drinks Clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        snacks = view.findViewById(R.id.cvSnacks);
+        snacks.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Snacks Clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        desserts = view.findViewById(R.id.cvDesserts);
+        desserts.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Desserts Clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        filter = view.findViewById(R.id.ivFilter);
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,16 +91,24 @@ public class Home_Fragment extends Fragment {
             }
         });
 
+        /*------------------------------------- Card View ---------------------------------------*/
 
-        RecyclerView popularFoods = view.findViewById(R.id.rvPopularFoods);
 
-        TextView seeAll = view.findViewById(R.id.tvSeeAll);
+        /*-------------------------------------- TextView ---------------------------------------*/
+
+        canteenNum = view.findViewById(R.id.tvCanteenNum);
+
+        seeAll = view.findViewById(R.id.tvSeeAll);
         seeAll.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), Search_Activity.class);
+
+            intent.putExtra("nav_title", "Popular Foods"); // Pass the title as an extra
+
             startActivity(intent);
         });
 
-        canteenNum = view.findViewById(R.id.tvCanteenNum);
+        /*-------------------------------------- TextView ---------------------------------------*/
+
 
         return view;
     }

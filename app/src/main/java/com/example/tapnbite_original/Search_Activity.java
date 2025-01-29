@@ -2,6 +2,7 @@ package com.example.tapnbite_original;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,14 @@ public class Search_Activity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(Search_Activity.this, R.color.primary));
 
         RecyclerView foods = findViewById(R.id.rvFoods);
+
         EditText search = findViewById(R.id.etSearch);
         search.requestFocus();
+
+        TextView navtitle = findViewById(R.id.nav_title);
+        String title = getIntent().getStringExtra("nav_title");
+        if (title != null) {
+            navtitle.setText(title);
+        }
     }
 }

@@ -24,7 +24,6 @@ public class Menu_Activity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(Menu_Activity.this, R.color.primary));
         getWindow().setNavigationBarColor(ContextCompat.getColor(Menu_Activity.this, R.color.white));
 
-
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_nav);
         bottomNavigation.setSelectedItemId(R.id.nav_home);
         bottomNavigation.setOnItemSelectedListener(navListener);

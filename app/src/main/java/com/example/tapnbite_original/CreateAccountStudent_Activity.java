@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,21 +13,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.tapnbite_original.Data.dbConnection;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class CreateAccountStudent_Activity extends AppCompatActivity {
-
-    dbConnection connectionClass;
-    Connection con;
-    ResultSet rs;
-    String fn, ln, id, email, pass, conpass, str, name;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +29,6 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
             return insets;
         });
 
-        connectionClass = new dbConnection();
-        connect();
 
         getWindow().setNavigationBarColor(ContextCompat.getColor(CreateAccountStudent_Activity.this, R.color.primary));
 
@@ -91,28 +77,4 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
 
     }
 
-    public void connect(){
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        executorService.execute(() -> {
-            try {
-                con = connectionClass.CONN();
-                if (con == null) {
-                    str = "Error in connection with MySQL server";
-                }else{
-                    str = "Connected with MySQL Server";
-                }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-
-            runOnUiThread(() -> {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e){
-                    e.printStackTrace();
-                }
-                Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-            });
-        });
-    }
 }

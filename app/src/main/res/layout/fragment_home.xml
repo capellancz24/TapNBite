@@ -315,7 +315,7 @@
             android:orientation="horizontal" >
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/mealsBtn"
+                android:id="@+id/cvMeals"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="15dp"
@@ -352,7 +352,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/drinksBtn"
+                android:id="@+id/cvDrinks"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginTop="5dp"
@@ -389,7 +389,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/nacksBtn"
+                android:id="@+id/cvSnacks"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="10dp"
@@ -426,7 +426,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/dessertBtn"
+                android:id="@+id/cvDesserts"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="10dp"
