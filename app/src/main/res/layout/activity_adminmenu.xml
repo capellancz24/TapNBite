@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/BottomNavigationViewTextStyleAdmin"
     tools:context=".Admin.AdminMenu_Activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,8 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
-        android:paddingTop="5dp"
-        app:itemIconSize="25dp"
+        app:labelVisibilityMode="selected"
+        app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@color/buttom_navigation_selector_admin"
         app:itemTextColor="@color/buttom_navigation_selector_admin"
         app:menu="@menu/buttom_navigation_menu_admin" />

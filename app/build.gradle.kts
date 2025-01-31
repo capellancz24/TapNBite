@@ -36,8 +36,8 @@ android {
 
 dependencies {
 
-    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
-    implementation("mysql:mysql-connector-java:5.1.49")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

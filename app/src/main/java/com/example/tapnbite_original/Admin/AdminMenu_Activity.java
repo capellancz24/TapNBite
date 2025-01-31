@@ -31,8 +31,8 @@ public class AdminMenu_Activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        getWindow().setStatusBarColor(ContextCompat.getColor(AdminMenu_Activity.this, R.color.primary));
         getWindow().setNavigationBarColor(ContextCompat.getColor(AdminMenu_Activity.this, R.color.white));
+        getWindow().setStatusBarColor(ContextCompat.getColor(AdminMenu_Activity.this, R.color.primary));
 
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_nav);
