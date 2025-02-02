@@ -316,13 +316,14 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvMeals"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="0.8"
-                app:cardBackgroundColor="@color/primary"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="35px">
 
                 <LinearLayout
@@ -334,25 +335,25 @@
                     <ImageView
                         android:layout_width="120px"
                         android:layout_height="120px"
-                        android:padding="3dp"
-                        android:src="@drawable/ic_selected_rice"
-                        tools:src="@drawable/ic_selected_rice" />
+                        android:paddingTop="4dp"
+                        android:src="@drawable/ic_ricemeal" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="7dp"
                         android:fontFamily="@font/atyp_semibold"
                         android:text="Meals"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/grey"
                         android:textSize="37px" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvDrinks"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginTop="5dp"
@@ -371,7 +372,8 @@
                     <ImageView
                         android:layout_width="128px"
                         android:layout_height="128px"
-                        android:padding="3dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="3dp"
                         android:src="@drawable/ic_drinks"
                         tools:src="@drawable/ic_drinks" />
 
@@ -390,6 +392,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSnacks"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="10dp"
@@ -408,7 +411,7 @@
                     <ImageView
                         android:layout_width="128px"
                         android:layout_height="128px"
-                        android:padding="5dp"
+                        android:padding="4.5dp"
                         android:src="@drawable/ic_snacks"
                         tools:src="@drawable/ic_snacks" />
 
@@ -427,6 +430,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvDesserts"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="10dp"

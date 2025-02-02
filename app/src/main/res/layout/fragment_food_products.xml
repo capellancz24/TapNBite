@@ -60,12 +60,17 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
         android:id="@+id/searchbar"
         android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_below="@id/constraintLayout"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_dashboardradius"
         android:elevation="1dp"
@@ -115,7 +120,7 @@
         android:id="@+id/ibFilter"
         android:layout_width="55dp"
         android:layout_height="53dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:elevation="1dp"
         android:background="@drawable/custom_dashboardradius"
@@ -128,21 +133,27 @@
         android:id="@+id/btnAddNewProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_below="@id/searchbar"
         android:layout_marginTop="15dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableStart="@drawable/ic_add3"
         android:background="@drawable/primary_btn"
         android:fontFamily="@font/atyp_medium"
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:text="Add New Product" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/btnAddNewProduct"/>
+        android:layout_below="@id/btnAddNewProduct"
+        android:layout_marginTop="15dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFoodProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
 
 </RelativeLayout>

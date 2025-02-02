@@ -10,10 +10,5 @@
         <item name="android:fontFamily">@font/atyp_medium</item>
     </style>
 
-    <style name="BottomNavigationViewTextStyleAdmin">
-        <item name="android:textSize">12dp</item>
-        <item name="android:fontFamily">@font/atyp_medium</item>
-    </style>
-
     <style name="Theme.TapNBite_Original" parent="Base.Theme.TapNBite_Original" />
 </resources>

@@ -13,7 +13,28 @@
         android:theme="@style/Theme.TapNBite_Original"
         tools:targetApi="31">
         <activity
-            android:name=".Menu_Activity"
+            android:name=".Admin.SecuritySetting_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Notification_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.PelletsManagement_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.CanteenDetails_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Transactions_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Analytics_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Check_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminMenu_Activity"
             android:exported="false" />
         <activity
             android:name=".Notification_Activity"
@@ -54,7 +75,7 @@
             android:name=".Onboarding1_Activity"
             android:exported="false" />
         <activity
-            android:name=".Admin.AdminMenu_Activity"
+            android:name=".Menu_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

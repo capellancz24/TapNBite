@@ -222,8 +222,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvAboutUs"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
@@ -254,10 +255,11 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
-                    android:id="@+id/aboutusbutton"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="aboutus"
                     android:src="@drawable/ic_arrow" />
@@ -269,8 +271,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvFAQs"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
@@ -301,10 +304,11 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
-                    android:id="@+id/faqbtn"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="faqs"
                     android:src="@drawable/ic_arrow" />
@@ -316,8 +320,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvTermsAndConditions"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
@@ -348,10 +353,11 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
-                    android:id="@+id/termsbutton"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="@string/terms_and_conditions"
                     android:src="@drawable/ic_arrow" />
@@ -363,8 +369,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvPrivacyPolicy"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
@@ -395,10 +402,11 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
-                    android:id="@+id/privacypolicybutton"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="@string/terms_and_conditions"
                     android:src="@drawable/ic_arrow" />
@@ -410,6 +418,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvLogout"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

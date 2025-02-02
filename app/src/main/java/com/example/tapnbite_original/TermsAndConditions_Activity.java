@@ -38,5 +38,6 @@ public class TermsAndConditions_Activity extends AppCompatActivity {
             Intent intent = new Intent(TermsAndConditions_Activity.this, CreateAccountStudent_Activity.class);
             startActivity(intent);
         });
+
     }
 }

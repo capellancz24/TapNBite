@@ -92,7 +92,7 @@
             android:clickable="true"
             android:id="@+id/cvCanteenDetails"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
@@ -123,10 +123,12 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ibCanteenDetails"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="Canteen Details"
                     android:src="@drawable/ic_arrow" />
@@ -153,7 +155,7 @@
             android:clickable="true"
             android:id="@+id/cvPelletsManagement"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
@@ -184,10 +186,12 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ibPelletsManagement"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="PelletsManagement"
                     android:src="@drawable/ic_arrow" />
@@ -214,7 +218,7 @@
             android:clickable="true"
             android:id="@+id/cvNotification"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
@@ -245,10 +249,12 @@
                     android:textColor="@color/text"
                     android:textSize="16dp" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ibNotification"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="Notification"
                     android:src="@drawable/ic_arrow" />
@@ -263,7 +269,7 @@
             android:clickable="true"
             android:id="@+id/cvSecuritySetting"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
@@ -296,8 +302,10 @@
 
                 <ImageButton
                     android:id="@+id/ibSecuritySetting"
-                    android:layout_width="50dp"
-                    android:layout_height="53dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="13dp"
                     android:background="#0000"
                     android:contentDescription="ibSecuritySetting"
                     android:src="@drawable/ic_arrow" />
@@ -312,7 +320,7 @@
             android:clickable="true"
             android:id="@+id/cvLogout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
