@@ -23,6 +23,9 @@ import java.util.regex.Pattern;
 
 public class CreateAccountStudent_Activity extends AppCompatActivity {
     private String password;
+    private Spinner accountType;
+    private Button login, signup;
+    private TextInputEditText lastName, schoolID, nuEmail, password, confirmPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,20 +43,20 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
 
         /*--------------------------------------- Spinner ---------------------------------------*/
 
-        Spinner accountType = findViewById(R.id.ddAccountType);
+        accountType = findViewById(R.id.ddAccountType);
 
         /*--------------------------------------- Spinner ---------------------------------------*/
 
 
         /*--------------------------------------- Buttons ---------------------------------------*/
 
-        Button login = findViewById(R.id.btnLogin);
+        login = findViewById(R.id.btnLogin);
         login.setOnClickListener(v -> {
             Intent intent = new Intent(CreateAccountStudent_Activity.this, LoginAccountStudent_Activity.class);
             startActivity(intent);
         });
 
-        Button signup = findViewById(R.id.btnSignUp);
+        signup = findViewById(R.id.btnSignUp);
         signup.setOnClickListener(v -> {
             Intent intent = new Intent(CreateAccountStudent_Activity.this, TermsAndConditions_Activity.class);
             startActivity(intent);
@@ -92,11 +95,11 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
             }
         });
 
-        TextInputEditText lastName = findViewById(R.id.inputLastName);
-        TextInputEditText schoolID = findViewById(R.id.inputSchoolID);
-        TextInputEditText nuEmail = findViewById(R.id.inputNUEmail);
-        TextInputEditText password = findViewById(R.id.inputPassword);
-        TextInputEditText confirmPassword = findViewById(R.id.inputConfirmPassword);
+        lastName = findViewById(R.id.inputLastName);
+        schoolID = findViewById(R.id.inputSchoolID);
+        nuEmail = findViewById(R.id.inputNUEmail);
+        //password = findViewById(R.id.inputPassword);
+        confirmPassword = findViewById(R.id.inputConfirmPassword);
 
         /*--------------------------------- TextInputEditTexts ----------------------------------*/
 

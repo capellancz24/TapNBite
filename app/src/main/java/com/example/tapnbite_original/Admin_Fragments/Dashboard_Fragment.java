@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,9 +37,9 @@ import java.util.List;
 
 public class Dashboard_Fragment extends Fragment {
 
-
-    PieChart mostFoodSales;
-    BarChart canteenPelletSales;
+    private Button check, analytics, reports, transactions;
+    private PieChart mostFoodSales;
+    private BarChart canteenPelletSales;
     private List<String> xValues = Arrays.asList("C1","C2");
 
     @Nullable
@@ -50,16 +51,29 @@ public class Dashboard_Fragment extends Fragment {
 
         mostFoodSales = view.findViewById(R.id.pcMostSaleFood);
         canteenPelletSales = view.findViewById(R.id.lcCanteenPelletSales);
+        check = view.findViewById(R.id.btnCheck);
+        analytics = view.findViewById(R.id.btnAnalytics);
+        reports = view.findViewById(R.id.btnReports);
+        transactions = view.findViewById(R.id.btnTransactions);
 
-        BarChart barChart = view.findViewById(R.id.lcCanteenPelletSales);
-        barChart.getAxisRight().setDrawLabels(false);
+        displayBarChart();
+        displayPieChart();
+
+
+
+
+        return view;
+    }
+
+    private void displayBarChart (){
+        canteenPelletSales.getAxisRight().setDrawLabels(false);
 
         ArrayList <BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(0,3));
         entries.add(new BarEntry(2,5));
         entries.add(new BarEntry(3,8));
 
-        YAxis yAxis = barChart.getAxisLeft();
+        YAxis yAxis = canteenPelletSales.getAxisLeft();
         yAxis.setAxisMinimum(1);
         yAxis.setAxisMaximum(10);
         yAxis.setAxisLineWidth(1f);
@@ -67,24 +81,22 @@ public class Dashboard_Fragment extends Fragment {
         yAxis.setLabelCount(10);
         yAxis.setGridColor(Color.rgb(177, 177, 177));
 
-        XAxis xAxis = barChart.getXAxis();
+        XAxis xAxis = canteenPelletSales.getXAxis();
         xAxis.setAxisLineColor(Color.rgb(177, 177, 177));
 
         BarDataSet dataSet = new BarDataSet(entries, "Pellet Sales");
         dataSet.setColors(ColorTemplate.createColors(new int[]{Color.rgb(2, 92, 248), Color.rgb(244, 167, 157)}));
-
         BarData barData = new BarData(dataSet);
-        barChart.setData(barData);
 
-        barChart.getDescription().setEnabled(false);
-        barChart.invalidate();
-
-        barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(xValues));
-        barChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
-        barChart.getXAxis().setGranularity(1f);
-        barChart.getXAxis().setGranularityEnabled(true);
-
-
+        canteenPelletSales.setData(barData);
+        canteenPelletSales.getDescription().setEnabled(false);
+        canteenPelletSales.invalidate();
+        canteenPelletSales.getXAxis().setValueFormatter(new IndexAxisValueFormatter(xValues));
+        canteenPelletSales.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+        canteenPelletSales.getXAxis().setGranularity(1f);
+        canteenPelletSales.getXAxis().setGranularityEnabled(true);
+    }
+    private void displayPieChart(){
         ArrayList<PieEntry> entiers = new ArrayList<>();
         entiers.add(new PieEntry(80f,"Adobo"));
         entiers.add(new PieEntry(90f,"Lemonade"));
@@ -101,11 +113,5 @@ public class Dashboard_Fragment extends Fragment {
         mostFoodSales.getDescription().setEnabled(false);
         mostFoodSales.animateY(1000);
         mostFoodSales.invalidate();
-
-
-
-
-
-        return view;
     }
 }
