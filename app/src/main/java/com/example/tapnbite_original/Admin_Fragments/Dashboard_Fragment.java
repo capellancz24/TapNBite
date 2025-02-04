@@ -1,5 +1,6 @@
 package com.example.tapnbite_original.Admin_Fragments;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.tapnbite_original.Admin.Analytics_Activity;
+import com.example.tapnbite_original.Admin.Check_Activity;
 import com.example.tapnbite_original.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
@@ -58,11 +61,45 @@ public class Dashboard_Fragment extends Fragment {
 
         displayBarChart();
         displayPieChart();
+        dashboardButtonClicked();
 
 
 
 
         return view;
+    }
+
+    private void dashboardButtonClicked(){
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Check_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        analytics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Analytics_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        reports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        transactions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     private void displayBarChart (){

@@ -197,6 +197,7 @@
                 android:background="?android:attr/listDivider" />
 
             <ListView
+                android:id="@+id/lvDailySales"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/viewholder_daily_sales"/>

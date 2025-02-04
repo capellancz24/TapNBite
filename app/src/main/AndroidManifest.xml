@@ -34,7 +34,7 @@
             android:name=".Admin.Check_Activity"
             android:exported="false" />
         <activity
-            android:name=".Admin.AdminMenu_Activity"
+            android:name=".Menu_Activity"
             android:exported="false" />
         <activity
             android:name=".Notification_Activity"
@@ -46,7 +46,7 @@
             android:name=".PrivacyPolicy_Activity"
             android:exported="false" />
         <activity
-            android:name=".Menu_Activity"
+            android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
@@ -75,7 +75,7 @@
             android:name=".LoginAccountStudent_Activity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Admin.AdminMenu_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

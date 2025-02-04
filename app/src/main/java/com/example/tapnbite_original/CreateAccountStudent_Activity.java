@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 
 
 public class CreateAccountStudent_Activity extends AppCompatActivity {
-    private String password;
     private Spinner accountType;
     private Button login, signup;
     private TextInputEditText lastName, schoolID, nuEmail, password, confirmPassword;
@@ -80,12 +79,12 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (password.length() >= 8) {
                     Pattern pattern = Pattern.compile("[a-zA-Z]");
-                    Matcher matcher = pattern.matcher(password);
+                    //Matcher matcher = pattern.matcher(password);
 
-                    boolean isPassContainsSpeChar = matcher.find();
-                    if (isPassContainsSpeChar){
+                    //boolean isPassContainsSpeChar = matcher.find();
+                    //if (isPassContainsSpeChar){
 
-                    }
+                    //}
                 }
             }
 
@@ -98,7 +97,7 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
         lastName = findViewById(R.id.inputLastName);
         schoolID = findViewById(R.id.inputSchoolID);
         nuEmail = findViewById(R.id.inputNUEmail);
-        //password = findViewById(R.id.inputPassword);
+        password = findViewById(R.id.inputPassword);
         confirmPassword = findViewById(R.id.inputConfirmPassword);
 
         /*--------------------------------- TextInputEditTexts ----------------------------------*/

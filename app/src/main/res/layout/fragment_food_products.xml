@@ -144,16 +144,11 @@
         android:textAllCaps="false"
         android:text="Add New Product" />
 
-    <ScrollView
+    <ListView
+        android:id="@+id/lvFoodProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/btnAddNewProduct"
-        android:layout_marginTop="15dp">
+        android:layout_below="@id/btnAddNewProduct"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvFoodProducts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
 
 </RelativeLayout>
