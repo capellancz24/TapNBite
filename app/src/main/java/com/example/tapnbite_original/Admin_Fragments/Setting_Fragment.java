@@ -15,6 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.tapnbite_original.Admin.CanteenDetails_Activity;
+import com.example.tapnbite_original.Admin.Check_Activity;
+import com.example.tapnbite_original.Admin.Notification_Activity;
+import com.example.tapnbite_original.Admin.PelletsManagement_Activity;
+import com.example.tapnbite_original.Admin.SecuritySetting_Activity;
 import com.example.tapnbite_original.LoginAccountStudent_Activity;
 import com.example.tapnbite_original.R;
 
@@ -34,8 +39,46 @@ public class Setting_Fragment extends Fragment {
         pelletsManagement = view.findViewById(R.id.cvPelletsManagement);
         notification = view.findViewById(R.id.cvNotification);
         securitySetting = view.findViewById(R.id.cvSecuritySetting);
-
         logout = view.findViewById(R.id.cvLogout);
+
+        settingButtonsClicked();
+
+        return view;
+    }
+
+    private void settingButtonsClicked(){
+        canteendetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CanteenDetails_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        pelletsManagement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PelletsManagement_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Notification_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        securitySetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SecuritySetting_Activity.class);
+                startActivity(intent);
+            }
+        });
+
         logout.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle("Logout")
@@ -55,10 +98,6 @@ public class Setting_Fragment extends Fragment {
                     .setCancelable(false) // Prevent closing the dialog by tapping outside
                     .show();
         });
-
-
-
-        return view;
     }
 
     private void handleLogout() {

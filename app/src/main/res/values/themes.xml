@@ -11,4 +11,18 @@
     </style>
 
     <style name="Theme.TapNBite_Original" parent="Base.Theme.TapNBite_Original" />
+
+    <style name="spinnerItemStyle">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/atyp_medium</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/atyp_medium</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>

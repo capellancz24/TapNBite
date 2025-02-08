@@ -1,25 +1,28 @@
 package com.example.tapnbite_original.ModelClass;
 
-public class FoodProductClass {
-    private String name, category, price, stockStatus;
+import androidx.recyclerview.widget.RecyclerView;
 
-    public FoodProductClass(String name, String category, String price, String stockStatus) {
-        this.name = name;
-        this.category = category;
-        this.price = price;
+public class FoodProductClass{
+
+    private String foodName, foodCategory, pelletPrice, stockStatus;
+
+    public FoodProductClass(String foodName, String foodCategory, String pelletPrice, String stockStatus) {
+        this.foodName = foodName;
+        this.foodCategory = foodCategory;
+        this.pelletPrice = pelletPrice;
         this.stockStatus = stockStatus;
     }
 
-    public String getName() {
-        return name;
+    public String getFoodName() {
+        return foodName;
     }
 
-    public String getCategory() {
-        return category;
+    public String getFoodCategory() {
+        return foodCategory;
     }
 
-    public String getPrice() {
-        return price;
+    public String getPelletPrice() {
+        return pelletPrice;
     }
 
     public String getStockStatus() {

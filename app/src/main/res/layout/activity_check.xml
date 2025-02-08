@@ -175,7 +175,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="290dp"
+            android:layout_height="294dp"
             android:layout_margin="30dp"
             android:background="@drawable/custom_dailysales"
             android:orientation="vertical">
@@ -186,8 +186,8 @@
                 android:layout_height="wrap_content"
                 android:padding="18dp"
                 android:fontFamily="@font/atyp_semibold"
-                android:textSize="16dp"
-                android:textColor="@color/text"
+                android:textSize="19dp"
+                android:textColor="@color/primary"
                 android:text="Daily Sales" />
 
             <View
@@ -199,8 +199,7 @@
             <ListView
                 android:id="@+id/lvDailySales"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/viewholder_daily_sales"/>
+                android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>
 

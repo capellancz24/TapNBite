@@ -12,9 +12,11 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.tapnbite_original.Admin.Analytics_Activity;
 import com.example.tapnbite_original.Admin.Check_Activity;
+import com.example.tapnbite_original.Admin.Transactions_Activity;
 import com.example.tapnbite_original.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
@@ -40,7 +42,7 @@ import java.util.List;
 
 public class Dashboard_Fragment extends Fragment {
 
-    private Button check, analytics, reports, transactions;
+    private Button check, analytics, users, transactions;
     private PieChart mostFoodSales;
     private BarChart canteenPelletSales;
     private List<String> xValues = Arrays.asList("C1","C2");
@@ -56,7 +58,7 @@ public class Dashboard_Fragment extends Fragment {
         canteenPelletSales = view.findViewById(R.id.lcCanteenPelletSales);
         check = view.findViewById(R.id.btnCheck);
         analytics = view.findViewById(R.id.btnAnalytics);
-        reports = view.findViewById(R.id.btnReports);
+        users = view.findViewById(R.id.btnUsers);
         transactions = view.findViewById(R.id.btnTransactions);
 
         displayBarChart();
@@ -86,7 +88,7 @@ public class Dashboard_Fragment extends Fragment {
             }
         });
 
-        reports.setOnClickListener(new View.OnClickListener() {
+        users.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -96,7 +98,8 @@ public class Dashboard_Fragment extends Fragment {
         transactions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Transactions_Activity.class);
+                startActivity(intent);
             }
         });
 

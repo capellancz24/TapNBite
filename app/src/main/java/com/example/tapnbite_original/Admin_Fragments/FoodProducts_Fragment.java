@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tapnbite_original.AdapterClass.FoodProductAdapter;
 import com.example.tapnbite_original.ModelClass.FoodProductClass;
@@ -23,43 +25,36 @@ import com.example.tapnbite_original.databinding.ActivityMainBinding;
 import com.example.tapnbite_original.databinding.FragmentFoodProductsBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FoodProducts_Fragment extends Fragment {
 
-    FragmentFoodProductsBinding binding;
-    ListAdapter listAdapter;
-    ArrayList<FoodProductClass> dataArrayList = new ArrayList<>();
-    FoodProductClass foodProductClass;
+    private RecyclerView recyclerView;
+    private FoodProductAdapter adapter;
+    private List<FoodProductClass> foodItemList;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_food_products, container, false);
 
-        binding = FragmentFoodProductsBinding.inflate(inflater, container, false);
+        recyclerView = view.findViewById(R.id.rvFoodProducts);
 
         displayFoodProduct();
 
-
-        return binding.getRoot();
+        return view;
     }
 
     private void displayFoodProduct(){
-        //NOTE: THIS IS JUST A SAMPLE DATA FOR TESTING PURPOSES
-        String [] foodName = {"Chicken Adobo", "Siomai Rice", "Mango Ice Cream", "Iced Tea", "Water"};
-        String [] foodCategory = {"Main Meals", "Snacks", "Desserts", "Beverages"};
-        String [] pelletPrice = {"25", "45", "60", "75"};
-        String [] stockStatus = {"Available", "Low Stock", "Out Of Stock"};
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        int length = Math.min(Math.min(foodName.length, foodCategory.length), Math.min(pelletPrice.length, stockStatus.length));
+        // Sample data
+        foodItemList = new ArrayList<>();
+        foodItemList.add(new FoodProductClass("Chicken Adobo", "Main Meals", "75", "Available"));
+        foodItemList.add(new FoodProductClass("Beef Adobo", "Main Meals", "75", "Low Stock"));
+        foodItemList.add(new FoodProductClass("Pork Adobo", "Main Meals", "75", "Out Of Stock"));
 
-        for (int i = 0; i < length; i++) {
-            foodProductClass = new FoodProductClass(foodName[i], foodCategory[i], pelletPrice[i], stockStatus[i]);
-            dataArrayList.add(foodProductClass);
-        }
-
-        listAdapter = new FoodProductAdapter(getActivity(), dataArrayList);
-        binding.lvFoodProduct.setAdapter(listAdapter);
-
+        adapter = new FoodProductAdapter(getContext(), foodItemList);
+        recyclerView.setAdapter(adapter);
     }
 }

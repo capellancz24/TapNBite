@@ -18,7 +18,7 @@
         android:padding="10dp">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/ibBack"
             android:layout_width="48dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
@@ -85,17 +85,16 @@
                 android:orientation="horizontal">
 
                 <Spinner
-                    android:id="@+id/spinner1"
+                    android:id="@+id/spinnerCanteens"
+
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:layout_margin="3dp"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/spinnerItems"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:layout_margin="3dp"
                     android:padding="10dp"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -121,15 +120,8 @@
             android:background="@drawable/custom_dailysales"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="Top Product Performance"
-                android:textColor="@color/white"
-                android:textSize="16dp" />
-
             <ListView
+                android:id="@+id/lvTransactions"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

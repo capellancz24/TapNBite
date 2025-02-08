@@ -53,18 +53,27 @@ public class Analytics_Activity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(Analytics_Activity.this, R.color.primary));
 
         back = findViewById(R.id.ibBack);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new Dashboard_Fragment();
-                FragmentTransaction fn = getSupportFragmentManager().beginTransaction();
-                fn.replace(R.id.main, fragment).commit();
-            }
-        });
+        backButtonClicked();
 
         displayTopProductPerformance();
         displaySalesRecords();
         displayPeakHours();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        // Ensure the navigation bar is visible
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+    }
+
+    private void backButtonClicked(){
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void displayTopProductPerformance(){
@@ -123,7 +132,6 @@ public class Analytics_Activity extends AppCompatActivity {
             PeakHoursClass peakHoursClass = new PeakHoursClass(hourStart[i], hourEnd[i], breakName[i], orders[i]);
             dataArrayList3.add(peakHoursClass);
         }
-
 
         listAdapter = new PeakHoursAdapter(this, dataArrayList3);
         binding.lvPeakHours.setAdapter(listAdapter); // Ensure this ID matches your layout

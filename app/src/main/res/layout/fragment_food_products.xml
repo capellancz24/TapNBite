@@ -120,35 +120,36 @@
         android:id="@+id/ibFilter"
         android:layout_width="55dp"
         android:layout_height="53dp"
+        android:layout_below="@id/constraintLayout"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:elevation="1dp"
-        android:background="@drawable/custom_dashboardradius"
-        android:layout_below="@id/constraintLayout"
         android:layout_toEndOf="@id/searchbar"
+        android:background="@drawable/custom_dashboardradius"
         android:contentDescription="filter"
+        android:elevation="1dp"
         android:src="@drawable/ic_filteralt" />
 
     <Button
         android:id="@+id/btnAddNewProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_below="@id/searchbar"
-        android:layout_marginTop="15dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/primary_btn"
         android:fontFamily="@font/atyp_medium"
-        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Add New Product"
         android:textAllCaps="false"
-        android:text="Add New Product" />
+        android:textColor="@color/white" />
 
-    <ListView
-        android:id="@+id/lvFoodProduct"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFoodProducts"
+        android:layout_below="@id/btnAddNewProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/btnAddNewProduct"/>
+        android:layout_marginTop="10dp"/>
 
 
 </RelativeLayout>

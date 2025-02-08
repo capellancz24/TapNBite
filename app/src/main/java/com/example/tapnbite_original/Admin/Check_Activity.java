@@ -52,20 +52,29 @@ public class Check_Activity extends AppCompatActivity {
         });
 
         back = findViewById(R.id.ibBack);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new Dashboard_Fragment();
+        backButtonClicked();
 
-                FragmentTransaction fn = getSupportFragmentManager().beginTransaction();
-                fn.replace(R.id.main, fragment).commit();
-            }
-        });
 
         getWindow().setStatusBarColor(ContextCompat.getColor(Check_Activity.this, R.color.primary));
 
 
         displayDailySales();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        // Ensure the navigation bar is visible
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+    }
+
+    private void backButtonClicked(){
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void displayDailySales(){

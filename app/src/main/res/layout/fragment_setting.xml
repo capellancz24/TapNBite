@@ -124,7 +124,6 @@
                     android:textSize="16dp" />
 
                 <ImageView
-                    android:id="@+id/ibCanteenDetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -187,7 +186,6 @@
                     android:textSize="16dp" />
 
                 <ImageView
-                    android:id="@+id/ibPelletsManagement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -250,7 +248,6 @@
                     android:textSize="16dp" />
 
                 <ImageView
-                    android:id="@+id/ibNotification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -301,7 +298,6 @@
                     android:textSize="16dp" />
 
                 <ImageButton
-                    android:id="@+id/ibSecuritySetting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

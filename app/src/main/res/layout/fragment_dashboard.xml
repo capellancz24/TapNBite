@@ -189,6 +189,7 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/tvTotalSales"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -223,7 +224,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView71"
+                        android:id="@+id/tvTotalOrders"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -240,14 +241,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="5dp"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/atyp_medium"
                 android:text="Check"
                 android:textAllCaps="false"
                 android:textColor="@color/primary"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
 
         </LinearLayout>
 
@@ -265,7 +265,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="230dp"
                 android:layout_height="130dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="7.3dp"
@@ -281,19 +281,19 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:orientation="vertical"
-                        android:paddingEnd="120dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:fontFamily="@font/atyp_medium"
-                            android:text="Total Revenue Pellets"
+                            android:text="Total Revenue"
                             android:textColor="@color/grey" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
@@ -303,7 +303,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
-                                android:layout_weight="1"
                                 android:fontFamily="@font/atyp_semibold"
                                 android:text="8570"
                                 android:textColor="@color/primary"
@@ -343,7 +342,7 @@
 
                     <ImageView
                         android:id="@+id/imageView12"
-                        android:layout_width="150dp"
+                        android:layout_width="120dp"
                         android:layout_height="20dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="3dp"
@@ -357,12 +356,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:paddingStart="30dp"
                 android:orientation="vertical">
 
                 <Button
                     android:id="@+id/btnAnalytics"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:backgroundTint="@color/white"
@@ -370,24 +369,24 @@
                     android:text="Analytics"
                     android:textAllCaps="false"
                     android:textColor="@color/primary"
-                    android:textSize="8sp" />
+                    android:textSize="11sp" />
 
                 <Button
-                    android:id="@+id/btnReports"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btnUsers"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="30dp"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/atyp_medium"
-                    android:text="Reports"
+                    android:text="Users"
                     android:textAllCaps="false"
                     android:textColor="@color/primary"
-                    android:textSize="8sp" />
+                    android:textSize="11sp" />
 
                 <Button
                     android:id="@+id/btnTransactions"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="30dp"
@@ -396,7 +395,7 @@
                     android:text="Transactions"
                     android:textAllCaps="false"
                     android:textColor="@color/primary"
-                    android:textSize="8sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
         </LinearLayout>
