@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_spork"
+        android:icon="@drawable/ic_restaurant"
         android:title="Home">
     </item>
 
     <item
         android:id="@+id/nav_orders"
         android:icon="@drawable/ic_orders"
-        android:title="Receipt">
+        android:title="Orders">
     </item>
 
     <item
         android:id="@+id/nav_cart"
-        android:icon="@drawable/ic_cart"
+        android:icon="@drawable/ic_shoppingbag"
         android:title="Cart">
     </item>
 

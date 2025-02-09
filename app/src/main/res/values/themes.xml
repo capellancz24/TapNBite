@@ -1,8 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TapNBite_Original" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Base.Theme.TapNBite_Original" parent="Theme.Material3.DynamicColors.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/text</item>
+        <item name="colorPrimaryContainer">@color/light_2.0</item>
+        <item name="colorOnPrimaryContainer">@color/text2.0</item>
+
+        <item name="colorSecondaryContainer">#faf0e7</item>
     </style>
 
     <style name="BottomNavigationViewTextStyle">
@@ -24,5 +32,10 @@
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/atyp_medium</item>
         <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/primary</item> <!-- for uncheck state -->
+        <item name="android:textColorSecondary">@color/light_2.0</item> <!-- for check state -->
     </style>
 </resources>

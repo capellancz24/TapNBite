@@ -1,5 +1,6 @@
 package com.example.tapnbite_original;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +11,9 @@ import com.example.tapnbite_original.Fragments.Cart_Fragment;
 import com.example.tapnbite_original.Fragments.Home_Fragment;
 import com.example.tapnbite_original.Fragments.OrderHistory_Fragment;
 import com.example.tapnbite_original.Fragments.Profile_Fragment;
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.color.DynamicColors;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class Menu_Activity extends AppCompatActivity {
@@ -20,6 +23,8 @@ public class Menu_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        DynamicColors.applyToActivitiesIfAvailable(this.getApplication());
+
         setContentView(R.layout.activity_menu);
         getWindow().setStatusBarColor(ContextCompat.getColor(Menu_Activity.this, R.color.primary));
         getWindow().setNavigationBarColor(ContextCompat.getColor(Menu_Activity.this, R.color.white));
@@ -27,6 +32,10 @@ public class Menu_Activity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_nav);
         bottomNavigation.setSelectedItemId(R.id.nav_home);
         bottomNavigation.setOnItemSelectedListener(navListener);
+
+        BadgeDrawable badgeDrawable = bottomNavigation.getOrCreateBadge(R.id.nav_cart);
+        badgeDrawable.setVisible(true);
+        badgeDrawable.setNumber(1);
 
         Fragment selectedFragment = new Home_Fragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
