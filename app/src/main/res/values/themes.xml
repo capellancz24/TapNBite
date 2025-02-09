@@ -6,9 +6,9 @@
 
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/text</item>
+        <item name="colorOnPrimary">@color/primary</item>
         <item name="colorPrimaryContainer">@color/light_2.0</item>
-        <item name="colorOnPrimaryContainer">@color/text2.0</item>
+        <item name="colorOnPrimaryContainer">@color/text</item>
 
         <item name="colorSecondaryContainer">#faf0e7</item>
     </style>

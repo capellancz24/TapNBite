@@ -1,13 +1,17 @@
 package com.example.tapnbite_original;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -19,6 +23,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tapnbite_original.SQLiteHelper.DBHelper;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -28,10 +33,11 @@ import java.util.regex.Pattern;
 
 public class CreateAccountStudent_Activity extends AppCompatActivity {
     private CheckBox agreement;
-    private Button login, signup;
+    private Button login, signup, next, decline;
     private TextInputEditText fullName, schoolID, nuEmail, password, confirmPassword;
     private TextInputLayout txtLayoutFullName, txtLayoutSchoolID, txtLayoutNUEmail, txtLayoutPassword, txtLayoutConfirmPassword;
     private DBHelper DB;
+    private BottomSheetDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,18 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
         signup = findViewById(R.id.btnSignUp);
 
         agreement = findViewById(R.id.cbAgreement);
+        agreement.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    showTermsAndConditionsDialog();
+                } else {
+                    Toast.makeText(CreateAccountStudent_Activity.this, "Please accept terms and conditions", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        dialog = new BottomSheetDialog(CreateAccountStudent_Activity.this);
         
         fullNameTextWatcher();
         schoolIDTextWatcher();
@@ -85,8 +103,7 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
                     return;
                 }
 
-                if (!agreement.isChecked()) {
-                    Toast.makeText(CreateAccountStudent_Activity.this, "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
+                if (!agreement.isChecked()){
                     return;
                 }
 
@@ -114,6 +131,71 @@ public class CreateAccountStudent_Activity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void showTermsAndConditionsDialog() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+
+        View bottomSheetView = LayoutInflater.from(this).inflate(R.layout.dialog_termsandconditions, null);
+
+        bottomSheetDialog.setContentView(bottomSheetView);
+        bottomSheetDialog.setCancelable(false);
+
+        Button next = bottomSheetView.findViewById(R.id.btnNext);
+        Button decline = bottomSheetView.findViewById(R.id.btnDecline);
+
+        // Set up button listeners
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetDialog.dismiss();
+                showPrivacyPolicyDialog();
+            }
+        });
+
+        decline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetDialog.dismiss();
+                agreement.setChecked(false);
+
+                Toast.makeText(CreateAccountStudent_Activity.this, "You declined the terms and conditions", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        bottomSheetDialog.show();
+    }
+
+    private void showPrivacyPolicyDialog() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+
+        View bottomSheetView = LayoutInflater.from(this).inflate(R.layout.dialog_privacypolicy, null);
+
+        bottomSheetDialog.setContentView(bottomSheetView);
+        bottomSheetDialog.setCancelable(false);
+
+        Button accept = bottomSheetView.findViewById(R.id.btnAccept);
+        Button decline = bottomSheetView.findViewById(R.id.btnDecline);
+
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetDialog.dismiss();
+                agreement.setChecked(true);
+            }
+        });
+
+        decline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetDialog.dismiss();
+                agreement.setChecked(false);
+
+                Toast.makeText(CreateAccountStudent_Activity.this, "You declined the privacy policy", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        bottomSheetDialog.show();
     }
 
     private void btnLoginClicked(){

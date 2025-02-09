@@ -1,211 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <FrameLayout
+        style="@style/Widget.Material3.BottomSheet.Modal"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
+
+        <ScrollView
+            android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/atyp_medium"
-                        android:paddingTop="20dp"
-                        android:text="Privacy Policy"
-                        android:layout_weight="1"
-                        android:textColor="@color/text"
-                        android:textSize="26sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/dropdownbtn"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:contentDescription="dropdown"
-                        android:background="#0000"
-                        android:paddingTop="10dp"
-                        app:srcCompat="@drawable/ic_down" />
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/atyp_medium"
+                            android:paddingTop="20dp"
+                            android:text="Privacy Policy"
+                            android:textColor="@color/text"
+                            android:textSize="26sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_update" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/atyp_medium"
+                            android:paddingStart="3dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="Last Update: 11 January 2025"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/atyp_medium"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/privacypolicy"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="1. Collection and Use of Data"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/useofdata"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="2. Data Security and Protection"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/protection"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="3. Transparency and User Rights"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/rights"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="4. Service and System Limitations"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="25dp"
+                    android:text="@string/limitations"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/grey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:padding="3dp">
+                    android:paddingBottom="40dp">
 
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_update" />
-
-                    <TextView
-                        android:id="@+id/textView25"
+                    <Button
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:id="@+id/btnDecline"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/atyp_medium"
-                        android:paddingStart="3dp"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"
-                        android:text="Last Update: 11 January 2025"
-                        android:textColor="@color/grey"
-                        android:textSize="14sp" />
+                        android:textColor="@color/primary"
+                        android:text="Decline" />
+
+                    <Button
+                        android:id="@+id/btnAccept"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="Accept"
+                        android:backgroundTint="@color/primary"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
             </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/atyp_medium"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/privacypolicy"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="1. Collection and Use of Data"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/useofdata"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <View
-                android:id="@+id/divider5"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="2. Data Security and Protection"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/protection"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <View
-                android:id="@+id/divider6"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="3. Transparency and User Rights"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/rights"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <View
-                android:id="@+id/divider7"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="4. Service and System Limitations"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="50dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/limitations"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

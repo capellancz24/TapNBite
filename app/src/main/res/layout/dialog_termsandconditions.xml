@@ -5,207 +5,239 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <FrameLayout
+        style="@style/Widget.Material3.BottomSheet.Modal"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
+        <ScrollView
+            android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="20dp"
-                        android:fontFamily="@font/atyp_medium"
-                        android:text="Terms &amp; Conditions"
-                        android:textColor="@color/text"
-                        android:layout_weight="1"
-                        android:textSize="26sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/dropdownbtn"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:paddingTop="10dp"
-                        android:background="#0000"
-                        android:contentDescription="dropdown"
-                        app:srcCompat="@drawable/ic_down" />
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/atyp_medium"
+                            android:paddingTop="20dp"
+                            android:text="Terms &amp; Conditions"
+                            android:textColor="@color/text"
+                            android:textSize="26sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_update" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/atyp_medium"
+                            android:paddingStart="3dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="Last Update: 11 January 2025"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/atyp_medium"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/terms"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="1. Account Registration and Responsibilities"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/responsibilites"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="2. Use of Pellets and Payment Policy"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/paymentpolicy"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="3. App Access and Limitations"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/appaccess"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/atyp_semibold"
+                    android:text="4. Feedback and Community Conduct"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/atyp_regular"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/coduct"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/grey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:padding="3dp">
+                    android:paddingBottom="40dp">
 
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_update" />
-
-                    <TextView
-                        android:id="@+id/textView25"
+                    <Button
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:id="@+id/btnDecline"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/atyp_medium"
-                        android:paddingStart="3dp"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"
-                        android:text="Last Update: 11 January 2025"
-                        android:textColor="@color/grey"
-                        android:textSize="14sp" />
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@color/primary"
+                        android:text="Decline" />
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/primary"
+                        android:text="Next"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
             </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/atyp_medium" android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/terms"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="1. Account Registration and Responsibilities"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/responsibilites"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <View
-                android:id="@+id/divider5"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="2. Use of Pellets and Payment Policy"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/paymentpolicy"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <View
-                android:id="@+id/divider6"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="3. App Access and Limitations"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/appaccess"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <View
-                android:id="@+id/divider7"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semibold"
-                android:text="4. Feedback and Community Conduct"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
-                android:paddingTop="10dp"
-                android:paddingBottom="50dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/coduct"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

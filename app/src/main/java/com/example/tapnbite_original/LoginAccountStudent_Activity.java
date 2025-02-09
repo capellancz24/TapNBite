@@ -115,6 +115,17 @@ public class LoginAccountStudent_Activity extends AppCompatActivity {
             }
         });
 
+        password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    txtLayoutPassword.setEndIconMode(TextInputLayout.END_ICON_PASSWORD_TOGGLE);
+                } else {
+                    txtLayoutPassword.setEndIconMode(TextInputLayout.END_ICON_NONE);
+                }
+            }
+        });
+
         password.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -130,17 +141,6 @@ public class LoginAccountStudent_Activity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 txtLayoutPassword.setError(null);
                 txtLayoutPassword.setErrorEnabled(false);
-            }
-        });
-
-        password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                    txtLayoutPassword.setEndIconMode(TextInputLayout.END_ICON_PASSWORD_TOGGLE);
-                } else {
-                    txtLayoutPassword.setEndIconMode(TextInputLayout.END_ICON_NONE);
-                }
             }
         });
     }

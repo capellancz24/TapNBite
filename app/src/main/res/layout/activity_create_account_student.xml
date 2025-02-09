@@ -63,9 +63,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="5dp"
-                    app:startIconDrawable="@drawable/ic_profile"
-                    android:background="@color/white"
+                    app:startIconDrawable="@drawable/ic_person"
                     app:boxStrokeColor="@color/primary"
+                    app:boxStrokeWidth="1.5dp"
+                    app:boxBackgroundColor="@color/white"
                     app:hintTextColor="#025CF8"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -79,6 +80,7 @@
                         android:inputType="textPersonName"
                         android:hint="Full Name" />
                 </com.google.android.material.textfield.TextInputLayout>
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtLayoutEmail"
@@ -182,6 +184,8 @@
                 android:orientation="horizontal">
 
                 <CheckBox
+                    style="@style/Widget.Material3.CompoundButton.CheckBox"
+                    android:backgroundTint="@color/primary"
                     android:id="@+id/cbAgreement"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"

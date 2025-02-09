@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import com.example.tapnbite_original.FAQs_Activity;
 import com.example.tapnbite_original.LoginAccountStudent_Activity;
 import com.example.tapnbite_original.R;
+import com.example.tapnbite_original.TermsAndConditions_Activity;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class Profile_Fragment extends Fragment {
@@ -38,7 +39,6 @@ public class Profile_Fragment extends Fragment {
         /*-------------------------------------- CardView ---------------------------------------*/
 
         BottomSheetDialog dialog = new BottomSheetDialog(getActivity());
-        dialog.setCancelable(false);
 
 
         CardView aboutUs = view.findViewById(R.id.cvAboutUs);
@@ -59,27 +59,17 @@ public class Profile_Fragment extends Fragment {
         });
 
         CardView termsAndConditions = view.findViewById(R.id.cvTermsAndConditions);
-        termsAndConditions.setOnClickListener(v -> {
-            View view1 = getLayoutInflater().inflate(R.layout.dialog_termsandconditions, null);
-
-            dropdown = view1.findViewById(R.id.dropdownbtn);
-            dropdown.setOnClickListener(v2 -> dialog.dismiss());
-
-            dialog.show();
-            dialog.setContentView(view1);
-            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        termsAndConditions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TermsAndConditions_Activity.class);
+                startActivity(intent);
+            }
         });
 
         CardView privacyPolicy = view.findViewById(R.id.cvPrivacyPolicy);
         privacyPolicy.setOnClickListener(v -> {
-            View view2 = getLayoutInflater().inflate(R.layout.dialog_privacypolicy, null);
 
-            dropdown = view2.findViewById(R.id.dropdownbtn);
-            dropdown.setOnClickListener(v3 -> dialog.dismiss());
-
-            dialog.show();
-            dialog.setContentView(view2);
-            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         });
 
         CardView logout = view.findViewById(R.id.cvLogout);
